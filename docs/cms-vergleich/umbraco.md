@@ -1,10 +1,10 @@
-# Umbraco ⭐⭐⭐⭐
+# Umbraco ⭐⭐⭐
 
-## Gesamtbewertung: 72/100
+## Gesamtbewertung: 62/100
 
-**Empfehlung:** ⚠️ **AKZEPTABEL** (höhere Dev-Kosten)
+**Empfehlung:** ⚠️ **NICHT EMPFOHLEN** (50% höhere Gesamtkosten)
 
-**5-Jahr TCO:** CHF 667.282
+**5-Jahr TCO:** ~CHF 850.000 (+47% vs Drupal)
 
 ---
 
@@ -74,27 +74,44 @@
 
 ---
 
-## 5-Jahr TCO: CHF 667.282
+## 5-Jahr TCO: CHF 824.100
 
-### Jahr 1: CHF 336.000
-- Development: CHF 250.000 (höhere Hourly Rate)
-- Infrastructure: CHF 36.000
-- Licenses: CHF 14.000
-- Support: CHF 36.000
+### Jahr 1: CHF 580.700
+| Position | Kosten |
+|----------|--------|
+| Development (2.620h × CHF 185) | CHF 484.700 |
+| Infrastructure (Azure .NET) | CHF 48.000 |
+| Heartcore Lizenz | CHF 14.000 |
+| Support & Wartung | CHF 34.000 |
+| **Total Jahr 1** | **CHF 580.700** |
 
-### Jahre 2-5: CHF 331.282
-- Infrastructure: CHF 162.000
-- Licenses: CHF 56.000
-- Support: CHF 163.282
+### Jahre 2-5: CHF 243.400
+| Position | Kosten |
+|----------|--------|
+| Infrastructure (4 Jahre) | CHF 192.000 |
+| Heartcore Lizenz (4 Jahre) | CHF 56.000 |
+| Support & Wartung (20% von Dev) | CHF 96.940 |
+| **Total Jahre 2-5** | **CHF 344.940** |
+
+### Vergleich mit Drupal
+
+| Position | Drupal | Umbraco | Differenz |
+|----------|--------|---------|-----------|
+| Entwicklung | CHF 252.000 | CHF 484.700 | **+CHF 232.700** |
+| Hosting (5 Jahre) | CHF 150.000 | CHF 240.000 | **+CHF 90.000** |
+| Lizenzen (5 Jahre) | CHF 0 | CHF 70.000 | **+CHF 70.000** |
+| Support (5 Jahre) | CHF 146.400 | CHF 130.940 | -CHF 15.460 |
+| **5-Jahres TCO** | **CHF 548.400** | **CHF 824.100** | **+CHF 275.700 (+50%)** |
 
 ---
 
 ## Warum NICHT Umbraco für Locarno?
 
-1. ❌ **Höhere Dev-Kosten** - .NET Devs teurer + seltener (DACH)
-2. ❌ **License Costs** - CHF 70k für Heartcore
-3. ❌ **Kleinerer Developer Pool** - Schwer zu rekrutieren
-4. ⚠️ **Baseline fehlt** - Kein Baseline wie BörsenXperts
-5. ⚠️ **Vendor Lock-in** - Umbraco HQ Abhängigkeit
+1. ❌ **92% höhere Entwicklungskosten** - .NET Devs teurer (CHF 185/h vs CHF 150/h) + mehr Stunden ohne Baseline
+2. ❌ **60% höhere Hosting-Kosten** - .NET/Windows teurer als PHP/Linux
+3. ❌ **Heartcore-Lizenz erforderlich** - CHF 70k über 5 Jahre für API/Headless
+4. ❌ **Kleinerer Developer Pool** - Schwer zu rekrutieren in DACH-Region
+5. ❌ **Keine Baseline** - Kein Baseline wie adessoCMS verfügbar
+6. ⚠️ **Vendor Lock-in** - Umbraco HQ Abhängigkeit
 
-**Fazit:** Technisch gut, aber wirtschaftlich weniger attraktiv als Drupal
+**Fazit:** Technisch akzeptabel, aber **50% teurer als Drupal** (CHF 275.700 Mehrkosten über 5 Jahre). Die höheren Kosten sind nicht durch bessere Features gerechtfertigt.

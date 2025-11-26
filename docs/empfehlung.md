@@ -5,7 +5,7 @@
 Nach umfassender Analyse aller technischen, wirtschaftlichen und organisatorischen Faktoren lautet unsere klare Empfehlung:
 
 ::: tip EMPFEHLUNG
-**Drupal 11 mit BörsenXperts Distribution** ist die beste Wahl für den Relaunch der Locarno Film Festival Website.
+**Drupal 11 mit adessoCMS Distribution** ist die beste Wahl für den Relaunch der Locarno Film Festival Website.
 :::
 
 ## Entscheidungsgrundlage
@@ -42,7 +42,7 @@ Magnolia:     CHF 863.995   (29% teurer)
    - Größere Community (500k+ vs. 100k Entwickler)
    - Kein Framework Lock-in (.NET bei Umbraco)
 
-2. **BörsenXperts Baseline-Vorteil**
+2. **adessoCMS Baseline-Vorteil**
    - 693 Stunden bewährte Architektur
    - 480 Stunden Entwicklungszeit gespart
    - CHF 72.000 Netto-Ersparnis
@@ -70,7 +70,7 @@ Magnolia:     CHF 863.995   (29% teurer)
 
 | Risiko | Level | Mitigation | Status |
 |--------|-------|------------|--------|
-| **Komplexität** | Mittel | BörsenXperts Baseline vereinfacht Setup | ✅ Mitigiert |
+| **Komplexität** | Mittel | adessoCMS Baseline vereinfacht Setup | ✅ Mitigiert |
 | **Entwickler-Verfügbarkeit** | Niedrig | 500k+ Entwickler weltweit | ✅ Kein Problem |
 | **Performance** | Niedrig | Bewährt für High-Traffic | ✅ Erprobt |
 | **Upgrade-Pfad** | Niedrig | Drupal 8→9→10→11 erfolgreich | ✅ Etabliert |
@@ -233,7 +233,7 @@ gantt
 |-------------|-------|--------------|
 | **Kickoff** | 06.01.2026 | Projektplan, Team-Setup |
 | **Discovery Complete** | 03.02.2026 | Requirements, Content Inventory |
-| **Architecture Complete** | 24.02.2026 | Drupal Setup, BörsenXperts Integration |
+| **Architecture Complete** | 24.02.2026 | Drupal Setup, adessoCMS Integration |
 | **Content Types Complete** | 31.03.2026 | 23 Content Types konfiguriert |
 | **Components Complete** | 28.04.2026 | 35 Paragraph Types |
 | **Theme Complete** | 26.05.2026 | Mercury Theme angepasst |
@@ -270,7 +270,7 @@ gantt
 - ✅ Testing (PHPUnit, Playwright)
 
 **Nice-to-Have:**
-- ✅ BörsenXperts Distribution Erfahrung
+- ✅ adessoCMS Distribution Erfahrung
 - ✅ Migration Experience (Magnolia → Drupal)
 - ✅ Search API + Solr
 - ✅ Film Festival Domain Knowledge
@@ -322,7 +322,7 @@ gantt
 
 2. **Vertrags-Vorbereitung**
    - ☐ Statement of Work (SoW) Review
-   - ☐ BörsenXperts Baseline Lizenz-Agreement
+   - ☐ adessoCMS Baseline Lizenz-Agreement
    - ☐ Azure Subscription Setup
 
 ### Dezember 2025
@@ -345,7 +345,7 @@ gantt
    - ☐ Kickoff-Meeting (Team + Stakeholders)
    - ☐ Discovery Phase Start (Requirements, Inventory)
    - ☐ Development Environment Setup (DDEV)
-   - ☐ BörsenXperts Baseline Integration
+   - ☐ adessoCMS Baseline Integration
 
 ---
 

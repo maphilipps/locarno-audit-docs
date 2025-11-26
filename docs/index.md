@@ -98,7 +98,7 @@ graph TD
 ✅ Multilingual        ✅ Cookie Consent          ✅ Search Recipe
 ```
 
-### BörsenXperts Baseline-Vorteil
+### adessoCMS Baseline-Vorteil
 
 - ✅ Mercury Theme mit Tailwind CSS
 - ✅ Storybook-Integration für Components

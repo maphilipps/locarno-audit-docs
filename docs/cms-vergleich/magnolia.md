@@ -53,6 +53,6 @@
 2. ❌ **Teurer als Alternativen** - CHF 195k mehr als Drupal
 3. ❌ **Vendor Lock-in** - Strong dependency
 4. ❌ **Migration muss sowieso sein** - Magnolia 6.3 veraltet
-5. ❌ **Keine Synergien** - BörsenXperts Baseline nicht nutzbar
+5. ❌ **Keine Synergien** - adessoCMS Baseline nicht nutzbar
 
 **Fazit:** Wirtschaftlich nicht tragbar. Migration zu Drupal spart CHF 195k über 5 Jahre.

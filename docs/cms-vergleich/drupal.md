@@ -4,7 +4,7 @@
 
 **Empfehlung:** ✅ **EMPFOHLEN**
 
-**5-Jahr TCO:** CHF 669.638
+**5-Jahr TCO:** ~CHF 577.000 (32% günstiger als Umbraco, 45% günstiger als Magnolia)
 
 ---
 
@@ -14,7 +14,7 @@
 ✅ **Best-in-class Multilingual** - Native Unterstützung für 4 Sprachen
 ✅ **Proven Scalability** - Kann 8.000 req/min mit richtiger Architektur
 ✅ **Größte Community** - 1M+ Mitglieder, 50k+ Module
-✅ **BörsenXperts Baseline** - 480h (CHF 72k) gespart
+✅ **adessoCMS Baseline** - 480h (CHF 72k) gespart
 ✅ **Exzellente Sicherheit** - Dediziertes Security Team
 ✅ **Flexible Content-Modellierung** - Perfekt für 23 Content Types
 ✅ **Azure Support** - AKS, App Service, Blob Storage
@@ -52,9 +52,9 @@ isierungen
 - **API Capabilities:** 5/5 - REST/JSON:API/GraphQL
 
 ### Development Effort (20/25)
-- **Initial Setup:** 4/5 - BörsenXperts Baseline Vorteil
+- **Initial Setup:** 4/5 - adessoCMS Baseline Vorteil
 - **Content Migration:** 3/5 - Java→PHP komplex
-- **Theme Development:** 4/5 - Mercury Theme Foundation
+- **Theme Development:** 4/5 - adessoCMS Theme Foundation
 - **Custom Development:** 4/5 - Flexible aber komplex
 - **Testing/QA:** 5/5 - PHPUnit, Playwright
 
@@ -82,14 +82,14 @@ isierungen
 
 ---
 
-## BörsenXperts Baseline Vorteil
+## adessoCMS Baseline Vorteil
 
 **693 Stunden** proven, production-tested Architecture
 
 **Savings:** 480 Stunden = CHF 72.000
 
 ### Was ist enthalten:
-- Mercury Theme Foundation (Tailwind CSS)
+- adessoCMS Theme Foundation (Tailwind CSS)
 - Storybook Integration
 - Atomic Design Component Architecture
 - DDEV Development Environment
@@ -116,33 +116,32 @@ isierungen
 
 ---
 
-## 5-Jahr TCO Breakdown
+## 5-Jahr TCO Vergleich
 
-### Jahr 1: CHF 328.800
-- Development: CHF 231.400
-- Infrastructure: CHF 35.400
-- Support/Maintenance: CHF 36.000
-- Monitoring: CHF 3.000
-- Training: CHF 8.000
-- Contingency: CHF 15.000
+::: tip KALKULATION
+Detaillierte Kostenkalkulation im **adesso Calculator**:
 
-### Jahre 2-5: CHF 340.838
-- Infrastructure: CHF 156.337
-- Support/Maintenance: CHF 162.923
-- Monitoring: CHF 13.578
-- Training: CHF 8.000
+📊 **[Locarno-Festival-Kalkulation.xlsm](https://o365adessogroup.sharepoint.com/:x:/r/sites/Drupal/Shared%20Documents/General/Akquisen/Locarno%20Filmfestival/Locarno-Festival-Kalkulation.xlsm?d=wdda7cd93b37f46fb8233d671e1f1110e&csf=1&web=1&e=K6r1UQ)**
+:::
 
-**Total 5-Year TCO:** CHF 669.638
+| CMS | 5-Jahres TCO | Differenz zu Drupal |
+|-----|--------------|---------------------|
+| **Drupal 11** | **~CHF 577.000** | Basis |
+| Umbraco | ~CHF 850.000 | **+CHF 273.000 (+47%)** |
+| Magnolia | ~CHF 1.058.000 | **+CHF 481.000 (+83%)** |
 
 ---
 
 ## Warum Drupal für Locarno?
 
-1. **Zero License Costs** - CHF 345k gespart vs. Magnolia
-2. **BörsenXperts Baseline** - 480h (CHF 72k) gespart
-3. **Best Multilingual** - Native für EN/IT/FR/DE
-4. **Proven Scalability** - 8.000 req/min machbar
-5. **Large Developer Pool** - Easier hiring in DACH
-6. **Flexible Architecture** - 23 Content Types kein Problem
-7. **Strong Security** - Dedicated Security Team
-8. **Long-term Investment** - LTS bis 2028, Drupal 12 coming
+1. **47% günstiger als Umbraco** - ~CHF 273.000 Ersparnis über 5 Jahre
+2. **Zero License Costs** - CHF 345k gespart vs. Magnolia
+3. **adessoCMS Baseline** - 480h (CHF 72k) gespart
+4. **Günstigere Entwickler** - PHP CHF 150/h vs .NET CHF 185/h
+5. **Günstigeres Hosting** - Linux/PHP vs Windows/.NET
+6. **Best Multilingual** - Native für EN/IT/FR/DE
+7. **Proven Scalability** - 8.000 req/min machbar
+8. **Large Developer Pool** - Easier hiring in DACH
+9. **Flexible Architecture** - 23 Content Types kein Problem
+10. **Strong Security** - Dedicated Security Team
+11. **Long-term Investment** - LTS bis 2028, Drupal 12 coming

@@ -49,6 +49,6 @@ Drupal 11 bietet out-of-the-box:
 - ✅ Form-Labels
 - ✅ Accessibility-Testing Tools
 
-**BörsenXperts Baseline:** WCAG 2.1 AA Foundation included
+**adessoCMS Baseline:** WCAG 2.1 AA Foundation included
 
 [→ Drupal Accessibility-Features](/architektur/drupal#accessibility)

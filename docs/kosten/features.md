@@ -1,10 +1,20 @@
-# Feature-Liste (adesso Calculator)
+# Feature-Liste
 
-::: info QUELLE
-Diese Feature-Liste stammt aus dem **adesso Calculator 2.01** (Locarno-Festival-Kalkulation.xlsm).
-**42 Features** mit einem Gesamtaufwand von **137,5 PT** (Personentage).
-*(inkl. F-450 Keycloak: 3,33 PT)*
+## Übersicht
+
+::: tip KALKULATION
+Die vollständige Feature-Liste mit Aufwandsschätzungen befindet sich im **adesso Calculator**:
+
+📊 **[Locarno-Festival-Kalkulation.xlsm](https://o365adessogroup.sharepoint.com/:x:/r/sites/Drupal/Shared%20Documents/General/Akquisen/Locarno%20Filmfestival/Locarno-Festival-Kalkulation.xlsm?d=wdda7cd93b37f46fb8233d671e1f1110e&csf=1&web=1&e=K6r1UQ)**
+
+**Inhalt:**
+- 42 Features (F-10 bis F-450)
+- Aufwand pro Feature in PT
+- Rollen-Zuordnung
+- Risiko-Bewertung
 :::
+
+---
 
 ## Zusammenfassung nach 8 Kern-Positionen
 
@@ -21,204 +31,96 @@ Diese Feature-Liste stammt aus dem **adesso Calculator 2.01** (Locarno-Festival-
 
 ---
 
-## Alle Features nach Gruppe
+## Feature-Kategorien
 
-### Setup & Infrastruktur (2 Features)
-
-| ID | Title | Beschreibung | Annahmen |
-|----|-------|--------------|----------|
-| **F-10** | Projekt-Setup & CI/CD | DDEV-Setup, Git-Repository mit Branching-Strategie, CI/CD Pipeline (GitHub Actions), Multi-Environment Setup | Azure Hosting. Standard Drupal-Setup. |
-| **F-20** | Hosting-Setup | Einrichtung Platform.sh oder Azure, Multi-Environment Konfiguration, Deployment-Prozesse, SSL | Azure Hosting mit Drupal-Support. |
-
----
-
-### Content-Modellierung (14 Features)
-
-| ID | Title | Beschreibung | Risiko |
-|----|-------|--------------|--------|
-| **F-30** | CT: Film | 25+ Felder: Titel (mehrsprachig), Originaltitel, Jahr, Laufzeit, Land, Synopsis, Credits (Referenzen), Trailer, Stills | - |
-| **F-40** | CT: Person | Regisseure, Schauspieler, Produzenten, Jury: Name, Biografie, Foto, Filmografie (via Referenzen) | - |
-| **F-50** | CT: Film Section & Award | 11 Film-Sektionen (Piazza Grande, Concorso, etc.), 20+ Awards (Pardo d'Oro, etc.) | - |
-| **F-60** | CT: Event/Screening & Venue | Events mit Datum, Uhrzeit, Venue, Film-Referenz. Venues mit Adresse, Kapazität, Karte | - |
-| **F-70** | CT: News & Press | News/Pressemitteilungen mit Titel, Teaser, Body, Datum, Kategorie, Medien | - |
-| **F-80** | CT: Festival Edition & Archiv | 79 Festival-Editionen: Jahr, Motto, Jury, Statistiken, verknüpfte Filme/Awards | - |
-| **F-90** | Locarno Pro Content-Types | Open Doors Projects, Industry-Events, ToolBox-Ressourcen | - |
-| **F-100** | CT: Tickets & Akkreditierung | Ticket-/Pass-Typen, Akkreditierungskategorien (nur Infoseiten) | - |
-| **F-110** | Taxonomien | 7 Vokabulare: Genre, Land, Sprache, Jahr, Rolle, Award-Kategorie, Region | - |
-| **F-120** | Paragraph-Types (16 Typen) | Text, Text+Bild, Galerie, Video-Embed, Quote, CTA, Akkordeon, Film-Slider, Person-Grid, etc. | - |
-| **F-130** | Media-Types | Image (Focal Point), Remote Video (YouTube/Vimeo), Document (PDF, Press-Kits) | - |
+| Kategorie | Features | Beschreibung |
+|-----------|----------|--------------|
+| **Setup & Infrastruktur** | F-10, F-20 | Projekt-Setup, Azure Hosting |
+| **Content-Modellierung** | F-30 bis F-130 | 14 Content-Types, Taxonomien, Paragraphs |
+| **Views & Listings** | F-140 bis F-190 | Film-, Programm-, Award-Listings |
+| **Custom Development** | F-200 bis F-240 | Credits-System, Kalender, Schema.org |
+| **Suche** | F-250 | Search API + Solr |
+| **Frontend** | F-260 bis F-340 | Theme, Templates, SDC-Komponenten |
+| **Integrationen** | F-350 bis F-380 | Ticketing, Video, Newsletter, Import |
+| **Mehrsprachigkeit** | F-390 | 4-Sprachen-Setup (DE, EN, IT, FR) |
+| **SEO & Performance** | F-400, F-410 | SEO-Setup, Caching |
+| **Authentication** | F-450 | Keycloak oAuth2 SSO |
 
 ---
 
-### Views & Listings (6 Features)
+## Risiken
 
-| ID | Title | Beschreibung | Risiko |
-|----|-------|--------------|--------|
-| **F-140** | Film-Listings | Film-Hauptlisting mit Exposed Filters (Sektion, Jahr, Land, A-Z), AJAX-Filter | - |
-| **F-150** | Programm-Übersicht | Screenings nach Tag/Venue Matrix, Kalender-View, Filter nach Datum/Venue | R-70 |
-| **F-160** | Award & Palmarès Listings | Award-Listing pro Jahr, Award-Historie, Gewinner-Verknüpfung | - |
-| **F-170** | Personen & Jury Listings | Personen mit Filmografie, Jury-Übersicht pro Jahr, Team-Listing | - |
-| **F-180** | News & Content Listings | News mit Pagination, Pressemitteilungen-Archiv, FAQ-Listing | - |
-| **F-190** | Open Doors & Pro Listings | Open Doors Projects, Completed Films-Archiv, Venue-Übersicht | - |
+| ID | Risiko | Wahrsch. | Impact |
+|----|--------|----------|--------|
+| R-10 | Migration komplexer als erwartet | 60% | Hoch |
+| R-20 | Film-Datenbank-Import-Format unklar | 50% | Hoch |
+| R-30 | Ticketing-API nicht verfügbar | 40% | Mittel |
+| R-40 | Design-Änderungen während Projekt | 50% | Mittel |
+| R-50 | Legacy-URL-Struktur komplex | 50% | Mittel |
+| R-60 | Solr-Hosting nicht verfügbar | 30% | Mittel |
+| R-70 | Programm-Kalender-Komplexität | 40% | Mittel |
+| R-80 | WCAG AA Anforderungen unterschätzt | 40% | Mittel |
 
----
-
-### Custom Development (5 Features)
-
-| ID | Title | Beschreibung | Risiko |
-|----|-------|--------------|--------|
-| **F-200** | Film-Credits-System | Bidirektionale Film-Person-Verknüpfung mit Rollen, automatische Filmografie | - |
-| **F-210** | Programm-Kalender-Logik | Zeit/Venue-Matrix, Konflikt-Erkennung, Tagesansicht-Generierung | **R-70** |
-| **F-220** | Award-Gewinner-Verknüpfung | Film→Award→Jahr Logik, automatische Badge-Anzeige auf Film-Seiten | - |
-| **F-230** | Edition-Context | Aktuelle vs. vergangene Festival-Edition, automatische Umschaltung, Archiv-Modus | - |
-| **F-240** | Structured Data / Schema.org | Schema.org Markup: Movie, Event, Person, Organization. JSON-LD Generierung | - |
+::: warning HÖCHSTES RISIKO
+**R-10: Migration komplexer als erwartet**
+- 79 Jahre Archiv-Daten
+- Undokumentierte Datenstrukturen
+- Qualitätsprobleme in historischen Daten
+:::
 
 ---
 
-### Suche (1 Feature)
-
-| ID | Title | Beschreibung | Risiko |
-|----|-------|--------------|--------|
-| **F-250** | Search API + Solr | Search API, Solr-Backend, Facetten (Jahr, Sektion, Land, Genre), Autocomplete, Mehrsprachig | **R-60** |
-
----
-
-### Frontend (9 Features)
-
-| ID | Title | Beschreibung | Risiko |
-|----|-------|--------------|--------|
-| **F-260** | Theme-Setup & Design-System | Custom Theme (Starterkit/Radix), Design-Tokens, Vite Build, SCSS-Architektur | - |
-| **F-270** | Header & Navigation | Mega-Navigation Desktop, Mobile Off-Canvas, Language Switcher, Search, Sticky | - |
-| **F-280** | Footer & Globale Elemente | Multi-Column Footer, Newsletter-Signup, Breadcrumb, Cookie-Banner | - |
-| **F-290** | Homepage | Hero, News, Featured Films, Countdown, Programm-Teaser, Sponsor-Logos | - |
-| **F-300** | Film-Detail-Template | Poster, Trailer, Synopsis, Credits, Screenings, Awards, Related Films, Galerie | - |
-| **F-310** | Weitere Detail-Templates | Person, News, Section, Award, Event, Venue (6 Templates) | - |
-| **F-320** | Landing Pages | Archiv, Edition, Locarno Pro, Open Doors, Tickets, Akkreditierung, FAQ (9 Templates) | - |
-| **F-330** | SDC Komponenten (20+) | Cards, Film-Slider, Hero, Credits-Liste, Award-Badge, Kalender, Filter, Tabs, Modal, etc. | - |
-| **F-340** | Responsive & Cross-Browser | Responsive für alle Templates (Mobile, Tablet, Desktop), Cross-Browser-Testing | **R-40** |
-
----
-
-### Integrationen (4 Features)
-
-| ID | Title | Beschreibung | Risiko |
-|----|-------|--------------|--------|
-| **F-350** | Ticketing & Akkreditierung Embed | Externes Ticketing via Embed/iFrame, Akkreditierungs-Portal, ggf. API für Verfügbarkeit | **R-30** |
-| **F-360** | Video & Maps | YouTube/Vimeo oEmbed, Google Maps für Venues, responsive Einbettung | - |
-| **F-370** | Newsletter & Analytics | Newsletter-Signup (Mailchimp/Sendinblue), GA4 mit Consent-Banner (DSGVO/DSG) | - |
-| **F-380** | Film-Datenbank-Import | Import aus externer Quelle, Mapping, Validierung. **Hohes Risiko.** | **R-20** |
-
----
-
-### Mehrsprachigkeit (1 Feature)
-
-| ID | Title | Beschreibung | Risiko |
-|----|-------|--------------|--------|
-| **F-390** | 4-Sprachen-Setup | DE, EN, IT, FR. Content Translation, Interface Translation, hreflang, TMGMT | - |
-
----
-
-### Authentication (1 Feature)
-
-| ID | Title | Beschreibung | Aufwand |
-|----|-------|--------------|--------:|
-| **F-450** | Keycloak oAuth2 Integration | SSO-Integration mit Keycloak, oAuth2 Login, User-Synchronisation, Rollen-Mapping | **3,33 PT** |
-
----
-
-### SEO & Performance (2 Features)
-
-| ID | Title | Beschreibung | Risiko |
-|----|-------|--------------|--------|
-| **F-400** | SEO-Komplett-Setup | Metatags, Open Graph, XML-Sitemap, Pathauto, Redirects, Structured Data, robots.txt | **R-50** |
-| **F-410** | Performance-Optimierung | Caching-Strategie, CDN, Lazy Loading, Critical CSS, Performance-Monitoring | - |
-
----
-
-## Risiken-Referenz
-
-| ID | Risiko | Wahrsch. | Impact | Gewichtet |
-|----|--------|----------|--------|-----------|
-| R-10 | Migration komplexer als erwartet | 60% | 15 PT | **9,0 PT** |
-| R-20 | Film-Datenbank-Import-Format unklar | 50% | 10 PT | **5,0 PT** |
-| R-30 | Ticketing-API nicht verfügbar | 40% | 5 PT | **2,0 PT** |
-| R-40 | Design-Änderungen während Projekt | 50% | 8 PT | **4,0 PT** |
-| R-50 | Legacy-URL-Struktur komplex | 50% | 5 PT | **2,5 PT** |
-| R-60 | Solr-Hosting nicht verfügbar | 30% | 5 PT | **1,5 PT** |
-| R-70 | Programm-Kalender-Komplexität | 40% | 6 PT | **2,4 PT** |
-| R-80 | WCAG AA Anforderungen unterschätzt | 40% | 5 PT | **2,0 PT** |
-| | **TOTAL Risikopuffer** | | 59 PT | **28,4 PT** |
-
----
-
-## Mapping: 8 Positionen → Excel-Features
+## Position-zu-Feature Mapping
 
 ### Position 1: Azure einrichten und aufsetzen
 
 - **F-20:** Hosting-Setup (Azure-spezifisch)
-- Inkludiert: App Service, MySQL, Redis, Front Door, Blob Storage, Application Insights
+- App Service, MySQL, Redis, Front Door, Blob Storage
 - Staging + Production Environments
-- CI/CD mit GitHub Actions
 
 ### Position 2: CMS installieren und einrichten
 
 - **F-10:** Projekt-Setup & CI/CD
 - **F-390:** 4-Sprachen-Setup (DE, EN, IT, FR)
 - Drupal CMS 2.0 Installation
-- Modul-Stack Konfiguration
 
 ### Position 3: CMS Webpublishing Umsetzung Website
 
-**Content-Types (11):** F-30 bis F-130
-- Film, Person, Section, Award, Event, Venue, News, Press, Edition, Pro, Tickets
-
-**Views & Listings (6):** F-140 bis F-190
-- Film-Listings, Programm, Awards, Personen, News, Pro
-
-**Custom Development (5):** F-200 bis F-250
-- Credits, Kalender, Awards, Edition-Context, Schema.org, Search
-
-**Frontend (9):** F-260 bis F-340
-- Theme, Header, Footer, Homepage, Templates, Components, Responsive
+- **Content-Types:** F-30 bis F-130
+- **Views & Listings:** F-140 bis F-190
+- **Custom Development:** F-200 bis F-250
+- **Frontend:** F-260 bis F-340
 
 ### Position 4: APIs anbinden
 
 - **F-350:** Ticketing & Akkreditierung Embed
-- **F-360:** Video & Maps (YouTube, Vimeo, Google Maps)
-- **F-370:** Newsletter & Analytics (Mailchimp, GA4)
+- **F-360:** Video & Maps
+- **F-370:** Newsletter & Analytics
 - **F-380:** Film-Datenbank-Import
 
 ### Position 5: Registration und Anmelden (Keycloak)
 
-- **F-450:** Keycloak oAuth2 Integration (3,33 PT)
-- SSO-Integration mit Keycloak
-- oAuth2 Login Flow
-- User-Synchronisation
-- Rollen-Mapping
+- **F-450:** Keycloak oAuth2 Integration
+- SSO-Integration, oAuth2 Login, User-Sync
 
 ### Position 6: Datenintegration bisheriger Website
 
 - **F-380:** Film-Datenbank-Import / Migration
-- **P-150:** Datenmigration (28 PT in Project Tasks)
-- Magnolia Content Export
+- **P-150:** Datenmigration (Project Task)
 - 79 Jahre Archiv-Daten
 
-### Position 7: Dokumentation und Bereitstellen GitHub
+### Position 7: Dokumentation und GitHub
 
-Abgedeckt durch **Project Tasks:**
-- **P-120:** Erstellung Anwenderhandbuch (2 PT)
-- **P-130:** Kundenschulung (2 PT)
+- **P-120:** Anwenderhandbuch
+- **P-130:** Kundenschulung
 
-### Position 8: Projektleitung, Testing, Bugfix, Performance
+### Position 8: Projektleitung, Testing, Bugfix
 
-Abgedeckt durch **Project Tasks (96 PT):**
-- **P-170:** Projektmanagement (40 PT)
-- **P-80:** Softwaretest (13,4 PT)
-- **P-140:** Fehlerbearb. nach BzA (13,4 PT)
-- **P-60/P-70:** Analyse & Entwicklung (107 PT)
+- **P-170:** Projektmanagement
+- **P-80:** Softwaretest
+- **P-140:** Fehlerbearbeitung
 
 ---
 
 [→ Kostenschätzung](/kosten/schaetzung)
 [→ Budget-Analyse](/kosten/budget)
-[→ Offerte](/kosten/offerte)

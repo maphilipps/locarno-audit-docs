@@ -12,7 +12,7 @@
 - **Search:** Search API + Apache Solr 9.x
 
 ### Frontend
-- **Theme:** Mercury (BörsenXperts)
+- **Theme:** Mercury (adessoCMS)
 - **CSS:** Tailwind CSS 3.x
 - **Components:** Single Directory Components (SDC) + Paragraphs
 - **JavaScript:** Vanilla JS + Alpine.js für Interaktivität
@@ -23,7 +23,7 @@
 - **CI/CD:** Azure DevOps Pipelines
 - **Testing:** PHPUnit, Playwright, Axe-core
 
-## BörsenXperts Baseline
+## adessoCMS Baseline
 
 **693 Stunden bewährte Architektur:**
 

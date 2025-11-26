@@ -46,7 +46,7 @@ Das Locarno Film Festival betreibt aktuell eine Website basierend auf **Magnolia
 
 ## CMS-Empfehlung: Drupal 11
 
-Nach umfassender Evaluation von drei CMS-Systemen (Drupal, Umbraco, Magnolia) lautet die klare Empfehlung: **Drupal 11 mit BörsenXperts Distribution**.
+Nach umfassender Evaluation von drei CMS-Systemen (Drupal, Umbraco, Magnolia) lautet die klare Empfehlung: **Drupal 11 mit adessoCMS Distribution**.
 
 ### Entscheidungsgründe
 
