@@ -1,36 +1,50 @@
 # Budget-Analyse
 
-## ⚠️ Budget-Status
+::: info QUELLE
+Basiert auf **adesso Calculator 2.01** (Locarno-Festival-Kalkulation.xlsm)
+:::
 
-| | CHF |
-|---|---:|
-| **Ziel-Budget** | 250.000 |
-| **Jahr 1 Kosten (real)** | 328.800 |
-| **Differenz** | **+78.800 (+31,5%)** |
+## Projekt-Budget (adesso Calculator)
 
-**Status:** ❌ **OVER BUDGET**
+| Position | Aufwand | Kosten | Preis |
+|----------|--------:|-------:|------:|
+| **Features** | 137,5 PT | 106.147 € | 110.000 € |
+| **Project Tasks** | 96,0 PT | 53.600 € | 76.800 € |
+| **Risikopuffer** | 28,4 PT | 14.200 € | 22.720 € |
+| **TOTAL** | **261,9 PT** | **173.947 €** | **209.520 €** |
+
+::: tip UMRECHNUNG
+**EUR 209.520** ≈ **CHF 219.996** (Kurs 1,05)
+:::
+
+::: info HINWEIS
+Inkl. **F-450 Keycloak oAuth2** mit 3,33 PT
+:::
 
 ---
 
-## Jahr 1 Detailliert
+## Aufwand nach Rolle (adesso Calculator)
 
-### Development: CHF 231.400
+| Rolle | Seniority | Aufwand (PT) | Kosten (€) |
+|-------|-----------|-------------:|----------:|
+| Developer | Middle | 108,5 | 97.710 |
+| Project Manager | Senior | 43,0 | 21.500 |
+| Requirement Engineer | Middle | 39,5 | 19.733 |
+| Sonstige Rollen | Mixed | 33,4 | 16.700 |
+| Test Engineer | Middle | 17,7 | 8.850 |
+| Software Architect | Senior | 10,8 | 5.383 |
+| DevOps Engineer | Middle | 5,6 | 2.800 |
+| Test Manager | Senior | 3,4 | 1.700 |
+| **TOTAL** | | **261,9 PT** | **173.947 €** |
 
-| Phase | Stunden | CHF |
-|-------|--------:|----:|
-| Discovery & Planning | 80 | 11.500 |
-| Infrastructure Setup | 80 | 11.000 |
-| Content Architecture | 320 | 42.800 |
-| Theme Development | 280 | 36.200 |
-| Custom Development | 400 | 54.800 |
-| Content Migration | 240 | 32.800 |
-| Testing & QA | 200 | 25.800 |
-| Training & Handover | 80 | 11.500 |
-| Training Materials | - | 5.000 |
-| **Total** | **1.680h** | **231.400** |
+### Kennzahlen
 
-**BörsenXperts Baseline Savings:** -480h (CHF -72.000)
-**Without Baseline:** CHF 303.400
+| Parameter | Wert |
+|-----------|------|
+| Projektlänge | **20 Wochen** |
+| Team-Größe (Ø) | **3,1 FTE** |
+| Durchschn. Tagessatz | **663 € / 800 € (Preis)** |
+| Gross Profit Ratio | **800 €/Tag** |
 
 ---
 

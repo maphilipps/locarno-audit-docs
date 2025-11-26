@@ -1,223 +1,118 @@
 # Kostenschätzung: Drupal Relaunch
 
-::: warning WICHTIG
-Diese Kostenschätzung berücksichtigt **BörsenXperts Baseline** (480h Ersparnis).
-Ohne Baseline: +CHF 72.000 Zusatzkosten.
+::: info QUELLE
+Diese Kostenschätzung basiert auf dem **adesso Calculator 2.01** (Locarno-Festival-Kalkulation.xlsm).
+Alle Werte in EUR. Umrechnung CHF: ×1,05
 :::
 
-## Jahr 1: Gesamtkosten
+## Projekt-Zusammenfassung (adesso Calculator)
 
-| Kategorie | Stunden | Rate | Betrag | % |
-|-----------|---------|------|--------|---|
-| **Entwicklung** | 1.680h | CHF 150 | **CHF 231.400** | 70% |
-| **Azure Hosting** | - | - | **CHF 35.400** | 11% |
-| **Support & Wartung** | 240h | CHF 150 | **CHF 36.000** | 11% |
-| **Monitoring Tools** | - | - | **CHF 3.000** | 1% |
-| **Training** | - | - | **CHF 8.000** | 2% |
-| **Kontingenz (15%)** | - | - | **CHF 15.000** | 5% |
-| **TOTAL JAHR 1** | 1.920h | - | **CHF 328.800** | 100% |
+| Position | Aufwand (PT) | Kosten (€) | Preis (€) |
+|----------|-------------:|----------:|---------:|
+| **Features** | 137,5 | 106.147 | 110.000 |
+| **Project Tasks** | 96,0 | 53.600 | 76.800 |
+| **Risikopuffer** | 28,4 | 14.200 | 22.720 |
+| **TOTAL** | **261,9 PT** | **173.947 €** | **209.520 €** |
 
-::: danger BUDGET-ÜBERSCHREITUNG
-**Projektbudget:** CHF 250.000
-**Reale Kosten:** CHF 328.800
-**Differenz:** +CHF 78.800 (31,5% über Budget)
+::: tip UMRECHNUNG
+**EUR 209.520** ≈ **CHF 219.996** (Kurs 1,05)
 :::
 
-## Entwicklungskosten: Detaillierte Aufschlüsselung
+::: info HINWEIS
+Inkl. **F-450 Keycloak oAuth2** mit 3,33 PT (nachträglich hinzugefügt)
+:::
 
-### Phase 1: Setup & Architektur (120h)
+## Aufwand nach Rolle
 
-| Aufgabe | Mit Baseline | Ohne Baseline | Ersparnis |
-|---------|--------------|---------------|-----------|
-| DDEV Environment Setup | 8h | 16h | 8h |
-| Drupal 11 Installation | 8h | 16h | 8h |
-| **BörsenXperts Baseline Integration** | **16h** | **0h** | **+16h** |
-| Mercury Theme Setup | 20h | 80h | 60h |
-| Core Module Configuration | 24h | 60h | 36h |
-| CI/CD Pipeline Setup | 16h | 40h | 24h |
-| Development Docs | 12h | 24h | 12h |
-| Team Onboarding | 16h | 24h | 8h |
-| **Subtotal** | **120h** | **260h** | **140h** |
+| Rolle | Seniority | Aufwand (PT) | Kosten (€) |
+|-------|-----------|-------------:|----------:|
+| Developer | Middle | 108,5 | 97.710 |
+| Project Manager | Senior | 43,0 | 21.500 |
+| Requirement Engineer | Middle | 39,5 | 19.733 |
+| Sonstige Rollen | Mixed | 33,4 | 16.700 |
+| Test Engineer | Middle | 17,7 | 8.850 |
+| Software Architect | Senior | 10,8 | 5.383 |
+| DevOps Engineer | Middle | 5,6 | 2.800 |
+| Test Manager | Senior | 3,4 | 1.700 |
+| **TOTAL** | | **261,9 PT** | **173.947 €** |
 
-**Kosten:** CHF 18.000 (mit Baseline) vs. CHF 39.000 (ohne)
+## Projektdauer
 
-### Phase 2: Content Architecture (180h)
-
-#### Content Types (23 Types)
-
-| Content Type | Komplexität | Stunden | Felder |
-|--------------|-------------|---------|--------|
-| Homepage | Hoch | 40h | Hero Carousel, Content Sections |
-| Film Program | Hoch | 60h | 20+ Felder, Entity References |
-| Film Archive | Hoch | 50h | Search API Integration |
-| Film VOD | Mittel | 35h | Video Streaming Integration |
-| Person Profile | Mittel | 30h | Referenced by Films |
-| News Article | Mittel | 30h | Paragraphs, Media |
-| Press Release | Mittel | 25h | Media, Documents |
-| Palmarès | Mittel | 25h | Nested Awards |
-| Special Awards | Einfach | 15h | Basic Fields |
-| Venue | Mittel | 25h | Geolocation, Maps |
-| Film Section Page | Mittel | 20h | Landing Pages |
-| Jury | Mittel | 20h | Person References |
-| Pro/Industry Project | Mittel | 25h | Complex Relations |
-| Event | Mittel | 20h | Date Ranges, Locations |
-| Partner | Einfach | 10h | Logo, Link |
-| Landing Page | Hoch | 40h | Layout Builder |
-| Basic Page | Einfach | 20h | Standard Fields |
-| **Total** | - | **490h** | **ohne Baseline** |
-| **Mit Baseline-Template** | - | **180h** | **310h gespart** |
-
-**Baseline enthält:**
-- Content Type Blueprints
-- Field Template Library
-- Entity Reference Patterns
-- Media Integration Patterns
-
-**Kosten:** CHF 27.000 (mit Baseline) vs. CHF 73.500 (ohne)
-
-### Phase 3: Components / Paragraphs (200h)
-
-#### Paragraph Types (35 Components)
-
-| Kategorie | Anzahl | Stunden | Beispiele |
-|-----------|--------|---------|-----------|
-| **Hero Components** | 3 | 30h | Hero Carousel, Hero Video, Hero Static |
-| **Content Sections** | 8 | 60h | Text, Image-Text, Two-Column, Three-Column |
-| **Media Components** | 5 | 40h | Image Gallery, Video Embed, Slider |
-| **Film Components** | 4 | 40h | Film Card, Film List, Screening Info |
-| **Interactive** | 4 | 30h | Accordion, Tabs, Modal, Lightbox |
-| **CTA & Buttons** | 3 | 20h | CTA Block, Button Group, Banner |
-| **Lists & Cards** | 5 | 40h | News Teaser, Event Card, Person Card |
-| **Special** | 3 | 30h | Quote Block, Social Links, Contact Form |
-| **Total** | **35** | **290h** | **ohne Baseline** |
-| **Mit Baseline-Components** | **35** | **200h** | **90h gespart** |
-
-**Baseline enthält:**
-- Paragraph Type Blueprints (20 häufige Types)
-- Tailwind CSS Components
-- Storybook Stories für alle Components
-- Accessibility-Tests (WCAG 2.1 AA)
-
-**Kosten:** CHF 30.000 (mit Baseline) vs. CHF 43.500 (ohne)
-
-### Phase 4: Theme & Design (240h)
-
-| Aufgabe | Mit Baseline | Ohne Baseline | Ersparnis |
-|---------|--------------|---------------|-----------|
-| **Mercury Theme (Baseline)** | **0h** | **120h** | **120h** |
-| Custom Design Anpassungen | 80h | 80h | 0h |
-| Responsive Breakpoints | 40h | 60h | 20h |
-| Component Styling | 60h | 100h | 40h |
-| Animation & Interactions | 30h | 50h | 20h |
-| Performance Optimization | 20h | 40h | 20h |
-| Cross-browser Testing | 10h | 20h | 10h |
-| **Subtotal** | **240h** | **470h** | **230h** |
-
-**Baseline Mercury Theme:**
-- ✅ Tailwind CSS 3 Integration
-- ✅ Responsive Grid System
-- ✅ Component Library
-- ✅ Typography System
-- ✅ Color Scheme Management
-- ✅ Icon Library (Heroicons)
-
-**Kosten:** CHF 36.000 (mit Baseline) vs. CHF 70.500 (ohne)
-
-### Phase 5: Migration (320h)
-
-| Aufgabe | Stunden | Details |
-|---------|---------|---------|
-| Magnolia Content Export | 60h | JCR XML + CSV Exports |
-| Data Mapping & Transformation | 80h | Field-Mapping, Cleaning |
-| Drupal Migrate Plugin Dev | 100h | Source + Process Plugins |
-| Film Archive Migration (10k+) | 40h | Batch Processing, Search API |
-| Media Assets Migration | 30h | Download, Upload to Azure Blob |
-| URL Redirects | 20h | 2.000+ Redirects |
-| Validation & Fixes | 40h | Content Integrity Checks |
-| **Total** | **370h** | - |
-| **Mit Baseline Migrate Templates** | **320h** | **50h gespart** |
-
-**Baseline Migrate-Vorlagen:**
-- CSV/XML Source Plugin Templates
-- Media Migration Patterns
-- Taxonomy Migration Templates
-- URL Redirect Generator
-
-**Kosten:** CHF 48.000
-
-### Phase 6: Testing (200h)
-
-| Test-Kategorie | Stunden | Tools |
-|----------------|---------|-------|
-| Unit Tests (PHPUnit) | 50h | PHPUnit |
-| Integration Tests | 40h | PHPUnit, Behat |
-| E2E Tests (Playwright) | 50h | Playwright MCP |
-| Accessibility Tests | 30h | Axe-core, WAVE |
-| Performance Tests | 20h | k6, JMeter |
-| Cross-browser Testing | 10h | BrowserStack |
-| **Total** | **200h** | - |
-
-**Baseline Testing-Framework:**
-- ✅ PHPUnit Test Suites
-- ✅ Playwright Test Templates
-- ✅ CI/CD Test Integration
-- ✅ Accessibility Test Library
-
-**Kosten:** CHF 30.000
-
-### Phase 7: Deployment & Go-Live (80h)
-
-| Aufgabe | Stunden | Details |
-|---------|---------|---------|
-| Azure Infrastructure Setup | 20h | App Service, Database, Redis |
-| Staging Deployment | 10h | Full Migration on Staging |
-| Beta Launch | 20h | 10% Traffic Test |
-| Production Cutover | 10h | DNS Switch, Validation |
-| Post-Launch Monitoring | 20h | First Week Support |
-| **Total** | **80h** | - |
-
-**Kosten:** CHF 12.000
-
-### Phase 8: Training & Handover (50h)
-
-| Aufgabe | Stunden | Teilnehmer |
-|---------|---------|------------|
-| Admin Training | 15h | 5 Admins |
-| Editor Training | 20h | 10 Editors |
-| Developer Handover | 10h | 2 Devs |
-| Documentation | 5h | All |
-| **Total** | **50h** | - |
-
-**Kosten:** CHF 7.500
+| Parameter | Wert |
+|-----------|------|
+| **Projektlänge** | 20 Wochen |
+| **Team-Größe (Ø)** | 3,1 FTE |
+| **Anzahl Features** | 42 |
+| **Anzahl Risiken** | 8 |
 
 ---
 
-## Entwicklung: Zusammenfassung
+## Risiko-Analyse (aus adesso Calculator)
 
-| Phase | Mit Baseline | Ohne Baseline | Ersparnis |
-|-------|--------------|---------------|-----------|
-| Setup & Architektur | 120h | 260h | 140h |
-| Content Types | 180h | 490h | 310h |
-| Components | 200h | 290h | 90h |
-| Theme & Design | 240h | 470h | 230h |
-| Migration | 320h | 370h | 50h |
-| Testing | 200h | 200h | 0h |
-| Deployment | 80h | 80h | 0h |
-| Training | 50h | 50h | 0h |
-| **TOTAL ENTWICKLUNG** | **1.390h** | **2.210h** | **820h** |
-| **+ Projektmanagement (21%)** | **290h** | **450h** | **160h** |
-| **GRAND TOTAL** | **1.680h** | **2.660h** | **980h** |
+| ID | Risiko | Wahrsch. | Impact (PT) | Gewichtet |
+|-----|--------|----------|-------------|-----------|
+| R-10 | Migration komplexer als erwartet | 60% | 15 | **9,0 PT** |
+| R-20 | Film-Datenbank-Import-Format unklar | 50% | 10 | **5,0 PT** |
+| R-40 | Design-Änderungen während Projekt | 50% | 8 | **4,0 PT** |
+| R-50 | Legacy-URL-Struktur komplex | 50% | 5 | **2,5 PT** |
+| R-70 | Programm-Kalender-Komplexität | 40% | 6 | **2,4 PT** |
+| R-30 | Ticketing-API nicht verfügbar | 40% | 5 | **2,0 PT** |
+| R-80 | WCAG AA Anforderungen unterschätzt | 40% | 5 | **2,0 PT** |
+| R-60 | Solr-Hosting nicht verfügbar | 30% | 5 | **1,5 PT** |
+| | **TOTAL Risikopuffer** | | **59 PT** | **28,4 PT** |
 
-**Entwicklungskosten @ CHF 150/h:**
-- **Mit Baseline:** CHF 231.400
-- **Ohne Baseline:** CHF 399.000
-- **Ersparnis:** **CHF 167.600**
-
-::: tip BASELINE-VORTEIL
-Die BörsenXperts Baseline spart **980 Stunden** = **CHF 147.000**.
-Baseline-Lizenz-Kosten: **CHF 75.000**
-**Netto-Ersparnis: CHF 72.000**
+::: warning HÖCHSTES RISIKO
+**R-10: Migration komplexer als erwartet** (9 PT gewichtet)
+- 79 Jahre Archiv-Daten
+- Undokumentierte Datenstrukturen
+- Qualitätsprobleme in historischen Daten
 :::
+
+---
+
+## Feature-Aufwand nach Kategorie
+
+| Kategorie | Anzahl Features | Beschreibung |
+|-----------|---------------:|--------------|
+| **Content-Modellierung** | 14 | Content-Types, Taxonomien, Paragraphs, Media |
+| **Frontend** | 9 | Theme, Templates, SDC-Komponenten, Responsive |
+| **Views & Listings** | 6 | Film-, Programm-, Award-, News-Listings |
+| **Custom Development** | 5 | Film-Credits, Kalender, Schema.org |
+| **Setup & Infrastruktur** | 2 | Projekt-Setup, Hosting |
+| **Integrationen** | 3 | Ticketing, Video/Maps, Newsletter |
+| **Authentication** | 1 | Keycloak oAuth2 SSO (F-450) |
+| **SEO** | 2 | SEO-Setup, Performance |
+| **Total** | **42 Features** | |
+
+::: details Feature-Gruppen (aus Excel)
+- **Setup & Infrastruktur:** F-10, F-20
+- **Content-Modellierung:** F-30 bis F-130
+- **Views & Listings:** F-140 bis F-190
+- **Custom Development:** F-200 bis F-240
+- **Suche:** F-250
+- **Frontend:** F-260 bis F-340
+- **Integrationen:** F-350 bis F-380
+- **Mehrsprachigkeit:** F-390
+- **SEO:** F-400, F-410
+- **Authentication:** F-450 (Keycloak oAuth2)
+:::
+
+---
+
+## Project Tasks (aus adesso Calculator)
+
+| ID | Task-Gruppe | Task | Aufwand (PT) |
+|----|-------------|------|-------------:|
+| P-170 | Übergreifend | Projektmanagement | 40 |
+| P-150 | Implementierung | Datenmigration | 28 |
+| P-60 | Implementierung | Analyse & Software Design | 26,8 |
+| P-70 | Implementierung | Software-Entwicklung | 80,5 |
+| P-80 | Implementierung | Softwaretest | 13,4 |
+| P-140 | Implementierung | Fehlerbearb. nach BzA | 13,4 |
+| P-10 bis P-50 | Initialisierung | Setup, Kick-off, Konzepte | 9 |
+| P-90 bis P-130 | Implementierung | Testautomatisierung, Doku, Schulung | 8 |
+| P-180 bis P-220 | Übergreifend | Test/Architektur/DevOps/Meetings | 11 |
+| | | **TOTAL Project Tasks** | **96 PT** |
 
 ## Azure Hosting-Kosten (Jahr 1)
 
